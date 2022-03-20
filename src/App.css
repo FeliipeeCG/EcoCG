@@ -7,13 +7,13 @@
   background-image: url(https://thumbs.gfycat.com/EntirePeriodicBear-size_restricted.gif);
 }
 .App-header {
-  background-color: #640808;
+  background-color: #000000;
   padding: 20px 10px;
   display: flex;
   justify-content: space-between;
 }
 .navbar {
-  color: whitesmoke;
+  color: rgb(236, 10, 10);
   padding: 20px 80px;
   display: block;
   list-style: none;
@@ -28,7 +28,25 @@ li {
 button {
   box-shadow: 0px 4px 3px;
   border-radius: 50px;
-  width: 150px;
-  background: rgb(255, 255, 255);
+  width: 190px;
+  height: 45px;
   text-decoration: none;
+  background-image: url(https://thumbs.gfycat.com/EntirePeriodicBear-size_restricted.gif);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.botonCarrito {
+  background: rgb(18, 170, 13);
+  color: rgb(0, 0, 0);
+}
+body {
+  background: linear-gradient(rgb(0, 0, 0), rgb(51, 3, 3));
+  font-size: 1.6rem;
+}
+h1 {
+  color: rgb(255, 255, 255);
+  background-image: url(https://thumbs.gfycat.com/EntirePeriodicBear-size_restricted.gif);
+  font-family: "Uchen", serif;
 }

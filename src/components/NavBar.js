@@ -3,19 +3,20 @@ function NavBar() {
   return (
     <header className="App-header">
       <img src="paga.png" className="img-header" />
-      <h1>Bienvenidos a la tienda de Felipe</h1>
       <ul className="navbar">
         <li>
           <button>
             <a href="https://www.instagram.com/feliipeecg/" target="_blank">
-              IG del vendedor
+              IG DEL <br />
+              VENDEDOR
             </a>
           </button>
         </li>
         <li>
           <button>
             <a href="https://feliipeecg.github.io/ProyectoF/" target="_blank">
-              Primera Pagina
+              PRIMERA <br />
+              PAGINA
             </a>
           </button>
         </li>
@@ -25,8 +26,16 @@ function NavBar() {
               href="https://feliipeecg.github.io/Tienda/index.html"
               target="_blank"
             >
-              Segunda Pagina
+              SEGUNDA <br />
+              PAGINA
             </a>
+          </button>
+        </li>
+        <li>
+          <button className="botonCarrito">
+            MI CARRITO
+            <br />
+            <img src="/.\carrito.png" width="25" height="25" />
           </button>
         </li>
       </ul>
