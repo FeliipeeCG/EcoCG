@@ -1,12 +1,14 @@
 import "./App.css";
 import "./components/NavBar";
 import NavBar from "./components/NavBar";
-
+import ListMercaderia from "./components/ListMercaderia/ListMercaderia";
 function App() {
   return (
     <div className="App">
-      <h1>TIENDA DE FELIPE</h1>
+      <h1>TU TIENDA FAVORITA</h1>
       <NavBar />
+      <h2>MERCADERIA</h2>
+      <ListMercaderia />
     </div>
   );
 }
