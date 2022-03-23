@@ -3,16 +3,17 @@ export default function Mercaderia(props) {
   console.log("Origen: ", props.origin);
   console.log("Titulo: ", props.title);
   console.log("Img: ", props.img);
-  console.log("Serie: ", props.serie);
+  console.log("Stock: ", props.stock);
 
   return (
     <div className="mercaderia-item">
       <img src={props.img} />
       <h3>{props.title}</h3>
-      <p>Serie: {props.serie}</p>
-      <p>Precio: ${props.price}</p>
       <p>Origen: {props.origin}</p>
-      <button className="botonCarrito">COMPRAR</button>
+      <p>Precio: ${props.price}</p>
+      <p>Stock: {props.stock}</p>
+      <button className="botonCarrito">AÑADIR AL CARRITO</button>{" "}
+      <button className="botonCarrito">REMOVER DEL CARRITO</button>
     </div>
   );
 }

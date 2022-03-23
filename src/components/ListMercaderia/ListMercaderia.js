@@ -6,29 +6,29 @@ const ListMercaderia = () => {
         title="Goku Blue"
         origin="EEUU"
         price="4500"
-        serie="DBS"
+        stock="5"
         img="./figuraGoku.png"
       />
       <Mercaderia
         title="Kurama"
-        img="./figuraKurama.png"
+        img="./figuraKurama1.png"
         origin="JAPON"
         price="4000"
-        serie="Naruto"
+        stock="10"
       />
       <Mercaderia
         title="Luffy"
         img="./figuraLuffy.png"
         origin="EEUU"
         price="5000"
-        serie="One Piece"
+        stock="8"
       />
       <Mercaderia
         title="Itadori"
         img="./figuraItadori.png"
         origin="CANADA"
         price="4300"
-        serie="Jujutsu K"
+        stock="4"
       />
     </div>
   );
