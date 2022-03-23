@@ -41,6 +41,19 @@ a {
   background: rgb(18, 170, 13);
   color: rgb(0, 0, 0);
 }
+.botonCarrito1 {
+  box-shadow: 0px 4px 3px;
+  border-radius: 50px;
+  width: 120px;
+  height: 70px;
+  text-decoration: none;
+  background: rgb(160, 170, 13);
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 42%;
+  left: 90%;
+  transform: translate(10%, -20%);
+}
 body {
   background: linear-gradient(rgb(0, 0, 0), rgb(51, 3, 3));
   font-size: 1.6rem;

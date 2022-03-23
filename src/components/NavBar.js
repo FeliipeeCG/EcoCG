@@ -32,10 +32,11 @@ function NavBar() {
           </button>
         </li>
         <li>
-          <button className="botonCarrito">
-            MI CARRITO
+          <button className="botonCarrito1">
+            MI <br /> CARRITO
             <br />
             <img src="/.\carrito.png" width="25" height="25" />
+            <br />
           </button>
         </li>
       </ul>
