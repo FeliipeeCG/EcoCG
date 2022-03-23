@@ -33,8 +33,7 @@ function NavBar() {
         </li>
         <li>
           <button className="botonCarrito1">
-            MI <br /> CARRITO
-            <br />
+            <p>MI CARRITO: </p>
             <img src="/.\carrito.png" width="25" height="25" />
             <br />
           </button>

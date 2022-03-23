@@ -5,13 +5,18 @@ export default function Mercaderia(props) {
   console.log("Titulo: ", props.title);
   console.log("Img: ", props.img);
   console.log("Stock: ", props.stock);
-  const [count, setCount] = useState(1);
-  console.log("estado Contador: ", count);
+  console.log("Carrito: ", props.cart);
+  const [count, setCount] = useState(props.stock);
+  console.log("CONTANDO: ", count);
   const addStock = () => {
-    setCount(count + 1);
+    if (count < props.stock) {
+      setCount(count + 1);
+    }
   };
   const removeStock = () => {
-    setCount(count - 1);
+    if (count > 0) {
+      setCount(count - 1);
+    }
   };
   return (
     <div className="mercaderia-item">
@@ -21,10 +26,10 @@ export default function Mercaderia(props) {
       <p>Precio: ${props.price}</p>
       <p>Stock: {count}</p>
       <button onClick={addStock} className="botonCarrito">
-        AÑADIR AL CARRITO
+        REMOVER DEL CARRITO
       </button>
       <button onClick={removeStock} className="botonCarrito">
-        REMOVER DEL CARRITO
+        AÑADIR AL CARRITO
       </button>
     </div>
   );
