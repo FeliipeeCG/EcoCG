@@ -25,7 +25,7 @@ export default function Mercaderia(props) {
       <p>Origen: {props.origin}</p>
       <p>Precio: ${props.price}</p>
       <p>Stock: {count}</p>
-      <button onClick={addStock} className="botonCarrito">
+      <button onClick={addStock} className="botonCarrito4">
         REMOVER DEL CARRITO
       </button>
       <button onClick={removeStock} className="botonCarrito">
