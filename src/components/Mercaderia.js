@@ -26,15 +26,9 @@ export default function Mercaderia(props) {
       </div>
       <h3>{props.title}</h3>
       <p>Precio: ${props.price}</p>
-      <button className="botonCarrito2">
-        CARACTERISTICAS
-        <Modal>
-          <p>Origen: {props.origin}</p>
-          <p>Stock: {count}</p>
-        </Modal>
-      </button>
-      <br />
-      <br />
+      <p>Origen: {props.origin}</p>
+      <p>Stock: {count}</p>
+
       <button onClick={addStock} className="botonCarrito4">
         REMOVER DEL CARRITO
       </button>
