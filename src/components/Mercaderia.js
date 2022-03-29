@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal } from "bootstrap";
+import Modal from "./Modal";
 export default function Mercaderia(props) {
   console.log("Precio: ", props.price);
   console.log("Origen: ", props.origin);
@@ -25,15 +25,16 @@ export default function Mercaderia(props) {
         <img src={props.img} />
       </div>
       <h3>{props.title}</h3>
-      <div>
-        <button className="botonCarrito2">CARACTERISTICAS</button>
-        <p>Origen: {props.origin}</p>
-        <p>Precio: ${props.price}</p>
-        <p>Stock: {count}</p>
-      </div>
-      <br /> <p>Origen: {props.origin}</p>
       <p>Precio: ${props.price}</p>
-      <p>Stock: {count}</p>
+      <button className="botonCarrito2">
+        CARACTERISTICAS
+        <Modal>
+          <p>Origen: {props.origin}</p>
+          <p>Stock: {count}</p>
+        </Modal>
+      </button>
+      <br />
+      <br />
       <button onClick={addStock} className="botonCarrito4">
         REMOVER DEL CARRITO
       </button>
