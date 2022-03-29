@@ -18,8 +18,8 @@ const ListMercaderia = () => {
         stock="10"
       />
       <Mercaderia
-        title="Kurama"
         img="./figuraKurama1.png"
+        title="Kurama"
         origin="JAPON"
         price="4000"
         stock="10"
@@ -34,4 +34,16 @@ const ListMercaderia = () => {
     </div>
   );
 };
+const getMercaderia = () => {
+  return new Promise((resolve, Reflect) => {
+    setTimeout(() => {
+      resolve(Mercaderia);
+    }, 2000);
+  });
+};
+async function getMercaderiaAsync() {
+  const mercaderia = await getMercaderia();
+  console.log("Mercaderia Async: ", mercaderia);
+}
+console.log(getMercaderia());
 export default ListMercaderia;
