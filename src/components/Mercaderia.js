@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Modal from "./Modal";
 export default function Mercaderia(props) {
+  console.log("Id: ", props.id);
   console.log("Precio: ", props.price);
   console.log("Origen: ", props.origin);
   console.log("Titulo: ", props.title);
@@ -27,8 +27,7 @@ export default function Mercaderia(props) {
       <h3>{props.title}</h3>
       <p>Precio: ${props.price}</p>
       <p>Origen: {props.origin}</p>
-      <p>Stock: {count}</p>
-
+      <p>Stock: {count}</p>{" "}
       <button onClick={addStock} className="botonCarrito4">
         REMOVER DEL CARRITO
       </button>
