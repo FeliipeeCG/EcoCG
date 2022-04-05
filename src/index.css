@@ -1,13 +1,162 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  text-align: center;
+}
+.img-header {
+  border: 10px outset rgb(235, 206, 206);
+  width: 150px;
+  background-image: url(https://thumbs.gfycat.com/EntirePeriodicBear-size_restricted.gif);
+}
+.App-header {
+  background-color: #00000073;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar {
+  color: rgb(236, 10, 10);
+  padding: 20px 80px;
+  display: block;
+  list-style: none;
+  display: flex;
+}
+.App-link {
+  color: #08fc00;
+}
+li {
+  margin-right: 20px;
+}
+button {
+  box-shadow: 0px 4px 3px;
+  border-radius: 50px;
+  width: 190px;
+  height: 45px;
+  text-decoration: none;
+  background-color: aliceblue;
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.botonCarrito {
+  background: rgb(14, 235, 6);
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 0px;
+  border-radius: 20px;
+  width: 110px;
+  height: 50px;
+}
+.botonCarrito4 {
+  background-image: url(https://www.teahub.io/photos/full/330-3307044_fondos-de-pantalla-galaxia.jpg);
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 0px;
+  border-radius: 30px;
+  width: 210px;
+  height: 35px;
+}
+.botonCarrito1 {
+  box-shadow: 0px 4px 3px;
+  border-radius: 50px;
+  width: 120px;
+  height: 75px;
+  text-decoration: none;
+  background: rgb(196, 209, 6);
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 42%;
+  left: 90%;
+  transform: translate(10%, -20%);
+}
+.botonCarrito2 {
+  color: rgb(0, 0, 0);
+  background: rgb(5, 102, 228);
+  box-shadow: 0px 0px 0px;
+  border-radius: 0px;
+  width: 180px;
+  height: 30px;
+}
+h4 {
+  color: white;
+}
+body {
+  background: linear-gradient(rgb(0, 0, 0), rgb(9, 2, 51));
+  font-size: 1.6rem;
+}
+h1 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-image: url(https://acegif.com/wp-content/gif/outerspace-58.gif);
+  font-family: "Uchen", serif;
+  padding: 20px 10px 40px;
+}
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+h3 {
+  color: rgb(253, 253, 255);
+  background-color: rgba(0, 0, 0, 0.418);
+  height: 35px;
+  border-radius: 40px;
+  font-style: italic;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.mercaderia-item {
+  float: left;
+  align-items: center;
+  border: 5px solid whitesmoke;
+  width: 300px;
+  height: 550px;
+  margin-top: 20px;
+  margin-left: 30px;
+  box-shadow: 2px 2px 7px white;
+  border-radius: 100px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(94, 91, 91, 0.205);
+}
+.mercaderia-item2 {
+  float: left;
+  align-items: center;
+  border: 5px solid rgb(0, 0, 0);
+  width: 300px;
+  height: 320px;
+  margin-top: 20px;
+  margin-left: 15px;
+  border-radius: 100px;
+  padding: 20px;
+  margin: 50px;
+  text-align: center;
+  background-image: url(https://acegif.com/wp-content/gif/outerspace-58.gif);
+}
+.imag-mercaderia {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+p {
+  color: whitesmoke;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.textoCarrito {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+}
+botnW {
+  color: white;
 }
