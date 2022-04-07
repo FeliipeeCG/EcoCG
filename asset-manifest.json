@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/EcoCG/static/css/main.9834ebd9.css",
+    "main.js": "/EcoCG/static/js/main.96a2322f.js",
+    "static/media/figuraKurama1.png": "/EcoCG/static/media/figuraKurama1.52c223fa467b6d9ce25b.png",
+    "static/media/figuraLuffy.png": "/EcoCG/static/media/figuraLuffy.bbb046c3eee168bf09bc.png",
+    "static/media/figuraItadori.png": "/EcoCG/static/media/figuraItadori.6feadf6bbfc485429471.png",
+    "static/media/figuraGoku.png": "/EcoCG/static/media/figuraGoku.efbd8916d9eba0d6bb99.png",
+    "index.html": "/EcoCG/index.html",
+    "main.9834ebd9.css.map": "/EcoCG/static/css/main.9834ebd9.css.map",
+    "main.96a2322f.js.map": "/EcoCG/static/js/main.96a2322f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9834ebd9.css",
+    "static/js/main.96a2322f.js"
+  ]
+}
