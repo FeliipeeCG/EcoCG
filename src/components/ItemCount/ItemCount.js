@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "@mui/material/Button";
 
 const ItemCount = ({ stock }) => {
   const initial = 1;
@@ -11,25 +10,24 @@ const ItemCount = ({ stock }) => {
   const ClickRestar = () => {
     setContador(cantidad - 1);
   };
-
   return (
-    <div className="btnContadores">
-      <Button
-        className="botones"
+    <div>
+      <button
+        className="botonCarrito4"
         onClick={ClickSumar}
         disabled={cantidad === stock ? true : false}
       >
         {" "}
         +{" "}
-      </Button>
-      <Button
-        className="botones"
+      </button>
+      <button
+        className="botonCarrito4"
         onClick={ClickRestar}
         disabled={cantidad === initial ? true : false}
       >
         -
-      </Button>
-      <p> Cantidad: {cantidad}</p>
+      </button>
+      <h2> Me llevo: {cantidad}</h2>
     </div>
   );
 };

@@ -1,12 +1,21 @@
-import { Button } from "@mui/material";
-
+import React, { useState, useEffect } from "react";
 function Item({ nombre, precio, img }) {
+  const addToCart = (evt) => {
+    evt.stopPropagation();
+    console.log("Añadido al carrito");
+  };
+
   return (
     <div className="mercaderia-item">
-      <img src={img} className="imgItem" />
-      <h3>{nombre}</h3>
-      <p>Precio: $ {precio}</p>
-      <Button className="botonCarrito4">Ver detalle</Button>
+      <img src={img} />
+      <div>
+        <h3>{nombre}</h3>
+        <p>Precio: $ {precio}</p>
+        <button className="botonCarrito">DETALLES</button>
+        <button onClick={addToCart} className="botonCarrito4">
+          COMPRAR
+        </button>
+      </div>
     </div>
   );
 }

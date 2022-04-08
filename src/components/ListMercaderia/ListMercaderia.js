@@ -9,7 +9,6 @@ const ListMercaderia = () => {
         stock="15"
         img="./figuraGoku.png"
       />
-
       <Mercaderia
         title="Luffy"
         img="./figuraLuffy.png"

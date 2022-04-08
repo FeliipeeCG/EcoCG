@@ -20,7 +20,7 @@ const ItemDetail = ({ image, name, price, detail, stock }) => {
         </Grid>
         <Grid md={3}>
           <div className="mercaderia-item2">
-            <img src={image} alt="imagenDetail" />
+            <img src={image} className="figu" alt="imagenDetail" />
             <h3> $ {price} </h3>
           </div>
         </Grid>

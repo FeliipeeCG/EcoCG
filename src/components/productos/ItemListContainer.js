@@ -5,7 +5,6 @@ import { Link, useParams } from "react-router-dom";
 const ItemListContainer = () => {
   const { category } = useParams();
   const [products, setProducts] = useState([]);
-
   const getProducts = () => {
     return new Promise((resolve, reject) => {
       return resolve(dataProducts);
