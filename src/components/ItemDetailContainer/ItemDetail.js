@@ -15,6 +15,9 @@ const ItemDetail = ({ item }) => {
           <div className="textoDetail">
             <h2>{item.nombre}</h2>
             <p>Descripción: {item.detalle}</p>
+            <p>Serie: {item.categoria}</p>
+            <p>Altura: {item.altura}</p>
+            <p>Origen: {item.origen}</p>
             <br />
             {cart.id ? (
               <div>
@@ -29,13 +32,12 @@ const ItemDetail = ({ item }) => {
                 onAdd={() => onAdd()}
               ></ItemCount>
             )}
-            <br />
           </div>
         </Grid>
         <Grid md={3}>
           <div className="mercaderia-item2">
             <img src={item.imagen} alt="imagenDetail" />
-            <h3> $ {item.precio} </h3>
+            <h4 className="h4Precio"> $ {item.precio} </h4>
           </div>
         </Grid>
       </Grid>

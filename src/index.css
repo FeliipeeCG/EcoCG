@@ -135,7 +135,7 @@ h3 {
 .mercaderia-item2 {
   float: left;
   align-items: center;
-  border: 5px solid rgb(0, 0, 0);
+  border: 8px double rgb(238, 232, 232);
   width: 300px;
   height: 320px;
   margin-top: 20px;
@@ -167,4 +167,7 @@ botnW {
 .textodetail:hover .figu {
   transition: filter 1s, transform 1s;
   transform: scale(1.1);
+}
+.h4Precio {
+  color: #08fc00;
 }

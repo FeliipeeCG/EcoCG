@@ -27,14 +27,11 @@ const ItemCount = ({ stock, onAdd }) => {
       >
         -
       </button>
-      <p>
-        Cantidad: {cantidad}
-        <br />
-        <br />
-        <button className="botonCarrito4" onClick={() => onAdd(cantidad)}>
-          Comprar!
-        </button>
-      </p>
+      <p>Cantidad: {cantidad}</p>
+      <br />
+      <button className="botonCarrito4" onClick={() => onAdd(cantidad)}>
+        COMPRAR
+      </button>
     </div>
   );
 };
