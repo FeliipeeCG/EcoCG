@@ -1,33 +1,36 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import dataProducts from "../data/products";
+import { useParams } from "react-router-dom";
+import dataProducts from "../data/Mercaderia";
 import ItemDetail from "./ItemDetail";
 import Container from "@mui/material/Container";
-const ItemDetailContainer = ({ item }) => {
+const ItemDetailContainer = () => {
+  const { id } = useParams();
   const [itemElegido, setItemElegido] = useState([]);
-  const getItem = (i) => {
+
+  const getItem = () => {
     return new Promise((resolve, reject) => {
-      return resolve(dataProducts[i]);
+      setTimeout(() => {
+        return resolve(dataProducts);
+      }, 2000);
     });
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      return getItem(item).then((value) => {
-        setItemElegido(value);
-      });
-    }, 2000);
+    getItem().then((res) => {
+      const itenId = res.find((e) => e.id == id);
+      setItemElegido(itenId);
+    });
   }, []);
 
   return (
     <Container>
       <div className="itemElegido">
-        {console.log(itemElegido)}
-        <ItemDetail
-          image={itemElegido.imagen}
-          name={itemElegido.nombre}
-          price={itemElegido.precio}
-        />
+        {itemElegido ? (
+          <ItemDetail item={itemElegido}></ItemDetail>
+        ) : (
+          <div>Paciencia que hay lag.....</div>
+        )}
       </div>
     </Container>
   );

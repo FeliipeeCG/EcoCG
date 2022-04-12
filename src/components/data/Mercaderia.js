@@ -9,9 +9,10 @@ const mercaderia = [
     nombre: "GOKU BLUE",
     precio: 5000,
     origen: "EEUU",
-    altura: 20,
+    altura: " 20cm",
     stock: 10,
     imagen: figuraGoku,
+    categoria: "DRAGON BALL",
     detalle:
       "Figura lanzada por el estreno de la pelicula La Resurreccion de Frizzer.",
   },
@@ -20,9 +21,10 @@ const mercaderia = [
     nombre: "ITADORI",
     precio: 4000,
     origen: "ESPAÑA",
-    altura: 22,
+    altura: " 22cm",
     stock: 15,
     imagen: figuraItadori,
+    categoria: "JUJUTSU KAISEN",
     detalle: "Primera figura del protagonista de Jujutsu Kaisen.",
   },
   {
@@ -30,9 +32,10 @@ const mercaderia = [
     nombre: "KURAMA",
     precio: 4500,
     origen: "CANADA",
-    altura: 25,
+    altura: " 25cm",
     stock: 10,
     imagen: figuraKurama1,
+    categoria: "NARUTO SHIPPUDEN",
     detalle: "Naruto modo Kurama cubierto del Susaano.",
   },
   {
@@ -40,11 +43,11 @@ const mercaderia = [
     nombre: "LUFFY",
     precio: 6000,
     origen: "JAPON",
-    altura: 28,
+    altura: " 30cm",
     stock: 10,
     imagen: figuraLuffy,
+    categoria: "ONE PIECE",
     detalle: "Luffy en la cuarta marcha modelo SNAKEMAN.",
   },
 ];
-
 export default mercaderia;
