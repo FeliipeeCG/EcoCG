@@ -1,9 +1,9 @@
 function Cart() {
   return (
     <div className="App">
-      <h1>Soy el carrito</h1>
+      <h1>SOY EL CARRITO</h1>
       <div>
-        <p>GRACIAS POR SU COMPRA</p>
+        <h2>GRACIAS POR SU COMPRA</h2>
         <img src="./carrito.png"></img>
       </div>
     </div>
