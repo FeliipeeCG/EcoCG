@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-function Item({ item: { nombre, altura, stockItem, precio, imagen, id } }) {
+function Item({ item: { nombre, precio, imagen, id } }) {
   return (
     <div className="mercaderia-item">
       <img src={imagen} className="imgItem" />

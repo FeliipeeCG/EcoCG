@@ -4,8 +4,7 @@ function Cart() {
       <h1>GRACIAS POR SU COMPRA</h1>
       <div>
         <h2>ESPERAMOS VERTE PRONTO</h2>
-        <img src="./carrito.png"></img>
-        <img src="./Cantinero.png"></img>
+        <img src="./paga.png"></img>
       </div>
     </div>
   );
