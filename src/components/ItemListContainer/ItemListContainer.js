@@ -1,11 +1,13 @@
 import dataProducts from "../data/Mercaderia";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import CartContext from "../context/CartContext";
 import ItemList from "./ItemList";
 import { Link, useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const { category } = useParams();
   const [products, setProducts] = useState([]);
+  const { cartProducts, addProductToCart } = useContext(CartContext);
 
   const getProducts = () => {
     return new Promise((resolve, reject) => {
@@ -24,6 +26,7 @@ const ItemListContainer = () => {
   };
 
   useEffect(() => {
+    console.log("Productos del carrito", cartProducts);
     getProducts().then((res) => {
       category ? filterProductByCategory(res, category) : setProducts(res);
     });

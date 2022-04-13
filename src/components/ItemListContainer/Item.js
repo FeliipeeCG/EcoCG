@@ -1,6 +1,4 @@
-import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-
 function Item({ item: { nombre, altura, stockItem, precio, imagen, id } }) {
   return (
     <div className="mercaderia-item">
@@ -10,6 +8,7 @@ function Item({ item: { nombre, altura, stockItem, precio, imagen, id } }) {
       <Link to={`/detail/${id}`}>
         <button className="botonCarrito4">DETALLES</button>
       </Link>
+      <button className="botonCarrito3">COMPRAR</button>
     </div>
   );
 }
