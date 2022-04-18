@@ -1,4 +1,5 @@
 import React from "react";
+import Carrito from "../Carrito/Carrito";
 function NavBar() {
   return (
     <header className="App-header">
@@ -34,11 +35,12 @@ function NavBar() {
         <li>
           <button className="textoCarrito">
             <a href="http://localhost:3000">
-              MI TIENDA <br />
-              <img src="/.\carrito.png" width="20" height="20" />
+              INICIO <br />
+              DE LA TIENDA
             </a>
           </button>
         </li>
+        <Carrito></Carrito>
       </ul>
     </header>
   );

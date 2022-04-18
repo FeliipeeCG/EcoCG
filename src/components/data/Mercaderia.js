@@ -2,6 +2,8 @@ import figuraGoku from "../productos/figuras/figuraGoku.png";
 import figuraItadori from "../productos/figuras/figuraItadori.png";
 import figuraKurama1 from "../productos/figuras/figuraKurama1.png";
 import figuraLuffy from "../productos/figuras/figuraLuffy.png";
+import figuraLuffy2 from "../productos/figuras/figuraLuffy2.png";
+import figuraSuperman from "../productos/figuras/figuraSuperman.png";
 
 const mercaderia = [
   {
@@ -40,7 +42,7 @@ const mercaderia = [
   },
   {
     id: 4,
-    nombre: "LUFFY",
+    nombre: "SNAKEMAN",
     precio: 6000,
     origen: "JAPON",
     altura: " 30cm",
@@ -48,6 +50,28 @@ const mercaderia = [
     imagen: figuraLuffy,
     categoria: "ONE PIECE",
     detalle: "Luffy en la cuarta marcha modelo SNAKEMAN.",
+  },
+  {
+    id: 5,
+    nombre: "SUPERMAN",
+    precio: 3000,
+    origen: "EEUU",
+    altura: " 20cm",
+    stock: 5,
+    imagen: figuraSuperman,
+    categoria: "UNIVERSO DC",
+    detalle: "Superman en pose heroica",
+  },
+  {
+    id: 6,
+    nombre: "LUFFY ",
+    precio: 5500,
+    origen: "ITALIA",
+    altura: " 20cm",
+    stock: 10,
+    imagen: figuraLuffy2,
+    categoria: "ONE PIECE",
+    detalle: "Luffy preparado para activar la segunda marcha",
   },
 ];
 export default mercaderia;

@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import CartContext from "../context/CartContext";
 function Item({ item: { nombre, precio, imagen, id } }) {
+  const { cartProducts, addProductCart } = useContext(CartContext);
+  useEffect(() => {
+    console.log("cartProducts: ", cartProducts);
+  });
+  const addToCart = (e) => {
+    addProductCart(Item);
+  };
   return (
     <div className="mercaderia-item">
       <img src={imagen} className="imgItem" />
@@ -8,7 +17,9 @@ function Item({ item: { nombre, precio, imagen, id } }) {
       <Link to={`/detail/${id}`}>
         <button className="botonCarrito4">DETALLES</button>
       </Link>
-      <button className="botonCarrito3">COMPRAR</button>
+      <button className="botonCarrito3" onClick={addToCart}>
+        COMPRAR
+      </button>
     </div>
   );
 }
