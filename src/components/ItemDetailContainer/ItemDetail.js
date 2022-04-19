@@ -1,13 +1,17 @@
 import { Container, Grid } from "@mui/material";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import CartContext from "../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
   const [cart, setCart] = useState({});
+  const { cartProducts, addProductCart } = useContext(CartContext);
   const onAdd = () => {
     setCart(item);
+    addProductCart(item);
   };
+  console.log("Productos en el carrito: ", cartProducts);
   return (
     <Container>
       <Grid container className="boxDetail">

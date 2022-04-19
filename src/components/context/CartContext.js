@@ -7,8 +7,8 @@ const CartProvider = ({ children }) => {
   const addProductCart = (product) => {
     console.log("productos agregados al carrito", product);
     setCartProducts((cartProducts) => [...cartProducts, product]);
-    console.log("Productos por comprar: ", cartProducts);
   };
+  console.log("Productos por comprar: ", cartProducts);
   const data = {
     cartProducts,
     addProductCart,
