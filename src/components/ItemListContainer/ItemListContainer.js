@@ -4,15 +4,25 @@ import ItemList from "./ItemList";
 import { Link, useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
+  const [loading, setLoading] = useState(true);
   const { category } = useParams();
   const [products, setProducts] = useState([]);
+
   const getProducts = () => {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        return resolve(dataProducts);
-      }, 2000);
+      return setTimeout(() => {
+        resolve(dataProducts);
+      }, 5330);
     });
   };
+
+  useEffect(() => {
+    setProducts([]);
+    getProducts().then((res) => {
+      setLoading(false);
+      category ? filterProductByCategory(res, category) : setProducts(res);
+    });
+  }, [category]);
 
   const filterProductByCategory = (array, category) => {
     array.map((producto) => {
@@ -22,18 +32,19 @@ const ItemListContainer = () => {
     });
   };
 
-  useEffect(() => {
-    getProducts().then((res) => {
-      category ? filterProductByCategory(res, category) : setProducts(res);
-    });
-  }, [category]);
-
   return (
     <div key={products.id}>
-      {products ? (
-        <ItemList items={products}></ItemList>
+      {loading ? (
+        <img
+          className="cargando"
+          src="https://c.tenor.com/9WFsBeb7sr8AAAAC/loading-gif.gif"
+          width="390"
+          height="150"
+        />
       ) : (
-        <div>Carganding... </div>
+        <>
+          <ItemList items={products}></ItemList>
+        </>
       )}
     </div>
   );

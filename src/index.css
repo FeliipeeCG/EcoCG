@@ -185,3 +185,15 @@ botnW {
 .h4Precio {
   color: #08fc00;
 }
+
+.hCart {
+  color: #fce300;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.cargando {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+}
