@@ -4,34 +4,28 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  const addProductCart = (product) => {
+  const addProductToCart = (product) => {
     let exist = cartProducts.find(
-      (cartProducts) => cartProducts.id === product.id
+      (cartProduct) => cartProduct.id === product.id
     );
-    !exist && setCartProducts((cartProducts) => [...cartProducts, product]);
+    if (!exist) {
+      setTotalPrice(totalPrice + product.price);
+      setCartProducts((cartProducts) => [...cartProducts, product]);
+    }
   };
-  const Dolorosa = () => {
-    let total = 0;
-    cartProducts.map((cartProduct) => {
-      total = cartProduct.price + total;
-    });
-    return total;
+  const deleteProduct = (product) => {
+    setCartProducts(
+      cartProducts.filter((cartProduct) => cartProduct.id !== product.id)
+    );
   };
 
-  const deleteProduct = (product) => {
-    console.log("No quiero esto: ", product);
-    setCartProducts(
-      cartProducts.filter((cartProduct) => {
-        return cartProduct.id !== product.id;
-      })
-    );
-  };
   const data = {
     cartProducts,
-    addProductCart,
+    //addProductCart,
     deleteProduct,
-    Dolorosa,
+    totalPrice,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

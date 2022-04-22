@@ -1,33 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState, useEffect, useContext } from "react";
 import CartContext from "../context/CartContext";
-import db from "../../firebase";
-import { collection, doc, getDocs } from "firebase/firestore";
-function Item({ item: { nombre, precio, imagen, id, stock } }) {
-  const { cartProducts, addProductCart } = useContext(CartContext);
 
-  const getItem = async () => {
-    const itemsCollection = collection(db, "figuras");
-    const productosSnapshot = await getDocs(itemsCollection);
-    console.log("productos del Snap: ", productosSnapshot);
-    const productList = productosSnapshot.docs.map((doc) => {
-      let product = doc.data();
-      product.id = doc.id;
-      console.log("doc ", doc.data());
+export default function Item({ item: { nombre, precio, imagen, id, stock } }) {
+  const navigate = useNavigate();
+  const { cartProducts, addProductToCart } = useContext(CartContext);
+  const [count, setCount] = useState(1);
+  const [countTest, setCountTest] = useState(1);
 
-      return product;
-    });
-
-    return productList;
+  const addToCart = (e) => {
+    e.stopPropagation();
+    console.log("Productos agregados:", cartProducts);
+    addProductToCart(Item);
   };
-  useEffect(() => {
-    getItem().then((res) => {
-      const itenId = res.find((e) => e.id == id);
-    });
-  }, []);
-
-  const initial = 1;
-  const [cantidad, setContador] = useState(1);
   return (
     <div className="mercaderia-item">
       <img src={imagen} className="imgItem" />
@@ -36,14 +21,9 @@ function Item({ item: { nombre, precio, imagen, id, stock } }) {
       <Link to={`/detail/${id}`}>
         <button className="botonCarrito4">DETALLES</button>
       </Link>
-      <button
-        className="botonCarrito3"
-        onClick={addProductCart}
-        disabled={cantidad === stock ? true : false}
-      >
+      <button className="botonCarrito3" onClick={addToCart}>
         COMPRAR
       </button>
     </div>
   );
 }
-export default Item;
