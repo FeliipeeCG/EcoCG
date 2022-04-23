@@ -49,7 +49,6 @@ const CartPage = () => {
       [name]: value,
     });
   };
-
   return (
     <Container>
       <div>
@@ -87,7 +86,7 @@ const CartPage = () => {
       </div>
       <div>
         <div>
-          <p>total</p>
+          <p>TOTAL</p>
           <p>$ {totalPrice}</p>
         </div>
       </div>
