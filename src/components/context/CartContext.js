@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
@@ -23,7 +22,7 @@ const CartProvider = ({ children }) => {
 
   const data = {
     cartProducts,
-    //addProductCart,
+    addProductToCart,
     deleteProduct,
     totalPrice,
   };

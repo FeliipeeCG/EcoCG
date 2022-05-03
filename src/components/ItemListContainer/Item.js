@@ -1,6 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import CartContext from "../context/CartContext";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Item({ item: { nombre, precio, imagen, id, stock } }) {
   const navigate = useNavigate();

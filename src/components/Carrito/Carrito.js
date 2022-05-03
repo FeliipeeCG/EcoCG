@@ -1,19 +1,10 @@
 import CartContext from "../context/CartContext";
 import { useContext, useState } from "react";
-import cartProducts from "../context/CartContext";
 //COMPONENTES
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
-//function Carrito() {
-//return (
-// <button className="botonCarrito1">
-// <img src="/.\carrito.png" width="20" height="20" />
-//<h2 className="txtCarro">{cartProducts.length}</h2>
-//</button>
-//);
-//}
+
 const Carrito = () => {
   const { cartProducts } = useContext(CartContext);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -35,7 +26,7 @@ const Carrito = () => {
         aria-expanded={open ? "true" : undefined}
         className="botonCarrito1"
       >
-        <img src="/.\carrito.png" width="20" height="20" />
+        <img src="/.\carrito.png" width="30" height="20" />
         <h2 className="txtCarro">{cartProducts.length}</h2>
       </button>
 
@@ -54,7 +45,7 @@ const Carrito = () => {
             mt: 1.5,
             "& .MuiAvatar-root": {
               width: 32,
-              height: 32,
+              height: 40,
               ml: -0.5,
               mr: 1,
             },
@@ -75,20 +66,20 @@ const Carrito = () => {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <p className="textoCarrito">CARRITO</p>
+        <h5 className="textoCarrito"> TU COMPRA</h5>
         <Divider />
         {cartProducts.map((cartProduct) => {
           return (
             <div className="item-cart-modal" key={cartProduct.id}>
               <div className="item-cart-modal__img">
-                <img src={`./${cartProduct.image}`} />
+                <img src={`./${cartProduct.imagen}`} />
               </div>
               <div className="item-cart-modal__info">
                 <p>{cartProduct.title}</p>
-                <span>$ {cartProduct.price}</span>
+                <p>$ {cartProduct.precio}</p>
               </div>
-              <div className="item-cart-modal__action">
-                <button>X</button>
+              <div>
+                <button className="botonCarrito2">X</button>
               </div>
             </div>
           );
@@ -96,7 +87,7 @@ const Carrito = () => {
 
         <Divider />
         <div className="footer-modal-cart">
-          <button className="btn-custom">
+          <button className="botonCarrito2">
             <Link to="/cart">Iniciar la compra</Link>
           </button>
         </div>
