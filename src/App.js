@@ -24,7 +24,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/info" element={ItemDetail} />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route path="/error" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

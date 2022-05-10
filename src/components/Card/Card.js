@@ -25,9 +25,6 @@ export default function Card({ data, action }) {
         <h3>{nombre}</h3>
         <p>Precio: $ {precio}</p>
         <p>Unidades disponibles: {stock} </p>
-        <Link to={`/detail/${id}`}>
-          <button className="botonCarrito3">DETALLES</button>
-        </Link>
         <button onClick={addToCart} className="botonCarrito4">
           COMPRAR
         </button>

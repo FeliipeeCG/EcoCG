@@ -75,7 +75,7 @@ const Carrito = () => {
             <Link to="/cart">COMPREMOS</Link>
           </button>
           <div>
-            <button className="botonCarrito6">X</button>
+            <button className="botonCarrito2">⇇</button>
           </div>
         </div>
         {cartProducts.map((cartProduct) => {

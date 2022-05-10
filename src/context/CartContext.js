@@ -10,6 +10,7 @@ const CartProvider = ({ children }) => {
       (cartProduct) => cartProduct.id === product.id
     );
     if (!exist) {
+      setTotalPrice(totalPrice + product.price * product.quantity);
       setTotalPrice(totalPrice + product.price);
       setCartProducts((cartProducts) => [...cartProducts, product]);
     }

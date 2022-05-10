@@ -30,7 +30,17 @@ function NavBar(props) {
             </a>
           </button>
         </li>
-
+        <li>
+          <button className="textoCarrito">
+            <a href="/contacto">DUDAS</a>
+          </button>
+        </li>
+        <button className="textoCarrito">
+          <a href="/error">
+            IG DE <br />
+            NUESTRA TIENDA
+          </a>
+        </button>
         <li>
           <button className="textoCarrito">
             <a href="http://localhost:3000">

@@ -56,7 +56,7 @@ const CartPage = () => {
           return (
             <>
               <div>
-                <div className="marcoCompra">
+                <div className="mercaderia-item">
                   <img src={`./${imagen}`} />
                   <h2>{nombre}</h2>
                   <p>Precio: ${precio}</p>
@@ -66,20 +66,19 @@ const CartPage = () => {
                   >
                     X
                   </button>
-                  <br />
                 </div>
               </div>
             </>
           );
         })}
       </div>
-      <div>
-        <div>
+      <div></div>
+      <Container>
+        <div className="mercaderia-item">
           <br />
-          <p>TOTAL</p>
-          <p>$ {totalPrice}</p>
+          <p>TOTAL: ${totalPrice}</p>
         </div>
-      </div>
+      </Container>
     </Container>
   );
 };

@@ -30,7 +30,7 @@ const ContactPage = () => {
             Afortunadamente tenemos proveedores capacitados para poder renovar
             nuestro stock en menos de dos semanas
           </p>
-          <h4>¿Que medios de pago utilizan?</h4>
+          <h3>¿Que medios de pago utilizan?</h3>
           <p>
             Aceptamos desde transferencias por CBU, pago en efectivo hastaa
             monedas de oro
@@ -50,22 +50,7 @@ const ContactPage = () => {
             dias
           </p>
         </section>
-        <section>
-          <h3>Contacto</h3>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              onKeyDown={handleChange}
-              value={value}
-              placeholder="Nombre"
-            />
-            <input type="text" placeholder="Apellido" />
-            <input type="mail" placeholder="mail" />
-
-            <button onClick={resetForm}>Limpiar Formulario</button>
-            <button type="submit">Enviar</button>
-          </form>
-        </section>
+        <section></section>
       </div>
     </Container>
   );
