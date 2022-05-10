@@ -107,7 +107,7 @@ h3 {
   align-items: center;
   border: 5px solid whitesmoke;
   width: 300px;
-  height: 640px;
+  height: auto;
   margin-top: 20px;
   margin-left: 30px;
   box-shadow: 2px 2px 7px white;
@@ -115,6 +115,20 @@ h3 {
   padding: 10px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.205);
+}
+.marcoCompra {
+  float: left;
+  align-items: center;
+  border: 5px solid whitesmoke;
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 30px;
+  box-shadow: 2px 2px 7px white;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  background-image: url(https://thumbs.gfycat.com/EntirePeriodicBear-size_restricted.gif);
 }
 .imag-mercaderia {
   margin-top: 5px;

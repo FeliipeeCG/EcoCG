@@ -3,7 +3,6 @@ import CartContext from "../context/CartContext";
 import db from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { Container } from "@mui/material";
-
 const CartPage = () => {
   const { cartProducts, deleteProduct, totalPrice } = useContext(CartContext);
   const [formData, setFormData] = useState({
@@ -57,28 +56,26 @@ const CartPage = () => {
           return (
             <>
               <div>
-                <img src={`./${imagen}`} />
+                <div className="marcoCompra">
+                  <img src={`./${imagen}`} />
+                  <h2>{nombre}</h2>
+                  <p>Precio: ${precio}</p>
+                  <button
+                    className="botonCarrito6"
+                    onClick={() => deleteProduct(cartProduct)}
+                  >
+                    X
+                  </button>
+                  <br />
+                </div>
               </div>
-              <div>
-                <p>{nombre}</p>
-              </div>
-              <div>
-                <p>precio: {precio}</p>
-              </div>
-              <div>
-                <p>1</p>
-              </div>
-              <div>
-                <button onClick={() => deleteProduct(cartProduct)}> X </button>
-              </div>
-
-              <div></div>
             </>
           );
         })}
       </div>
       <div>
         <div>
+          <br />
           <p>TOTAL</p>
           <p>$ {totalPrice}</p>
         </div>
