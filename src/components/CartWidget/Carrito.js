@@ -1,9 +1,10 @@
-import CartContext from "../context/CartContext";
 import { useContext, useState } from "react";
+import CartContext from "../../context/CartContext";
 //COMPONENTES
 import Menu from "@mui/material/Menu";
 import Divider from "@mui/material/Divider";
 import { Link } from "react-router-dom";
+import Mercaderia from "../../Utils/Mercaderia";
 
 const Carrito = () => {
   const { cartProducts } = useContext(CartContext);
@@ -51,12 +52,12 @@ const Carrito = () => {
             },
             "&:before": {
               content: '""',
-              display: "block",
+              display: "flex",
               position: "absolute",
               top: 0,
-              right: 14,
-              width: 10,
-              height: 10,
+              right: 5,
+              width: 20,
+              height: 20,
               bgcolor: "background.paper",
               transform: "translateY(-50%) rotate(45deg)",
               zIndex: 0,
@@ -66,31 +67,32 @@ const Carrito = () => {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <h5 className="textoCarrito"> TU COMPRA</h5>
+        <h4 className="textoCarrito"> TU COMPRA</h4>
         <Divider />
+
+        <div className="footer-modal-cart">
+          <button className="botonCarrito2">
+            <Link to="/cart">COMPREMOS</Link>
+          </button>
+          <div>
+            <button className="botonCarrito6">X</button>
+          </div>
+        </div>
         {cartProducts.map((cartProduct) => {
           return (
             <div className="item-cart-modal" key={cartProduct.id}>
               <div className="item-cart-modal__img">
-                <img src={`./${cartProduct.imagen}`} />
+                <img src={`./${cartProduct.imagen}`} width="60" height="100" />
               </div>
               <div className="item-cart-modal__info">
-                <p>{cartProduct.title}</p>
-                <p>$ {cartProduct.precio}</p>
-              </div>
-              <div>
-                <button className="botonCarrito2">X</button>
+                <h5 className="pModal">
+                  {cartProduct.nombre} (${cartProduct.precio})
+                </h5>
               </div>
             </div>
           );
         })}
-
         <Divider />
-        <div className="footer-modal-cart">
-          <button className="botonCarrito2">
-            <Link to="/cart">Iniciar la compra</Link>
-          </button>
-        </div>
       </Menu>
     </div>
   );

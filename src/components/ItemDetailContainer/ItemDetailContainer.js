@@ -1,21 +1,18 @@
-import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import dataProducts from "../data/Mercaderia";
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import Mercaderia from "../../Utils/Mercaderia";
 import Container from "@mui/material/Container";
+import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [itemElegido, setItemElegido] = useState([]);
-
-  const getItem = async () => {
+  const getItem = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        return resolve(dataProducts);
+        return resolve(Mercaderia);
       }, 2000);
     });
   };
-
   useEffect(() => {
     getItem().then((res) => {
       const itenId = res.find((e) => e.id == id);
@@ -27,9 +24,9 @@ const ItemDetailContainer = () => {
     <Container>
       <div className="itemElegido">
         {itemElegido ? (
-          <ItemDetail item={itemElegido}></ItemDetail>
+          <div>Esta cargando</div>
         ) : (
-          <div>Paciencia que hay lag.....</div>
+          <ItemDetail data={Mercaderia} />
         )}
       </div>
     </Container>

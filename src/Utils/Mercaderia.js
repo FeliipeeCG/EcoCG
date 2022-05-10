@@ -1,11 +1,10 @@
-import figuraGoku from "../productos/figuras/figuraGoku.png";
-import figuraItadori from "../productos/figuras/figuraItadori.png";
-import figuraKurama1 from "../productos/figuras/figuraKurama1.png";
-import figuraLuffy from "../productos/figuras/figuraLuffy.png";
-import figuraLuffy2 from "../productos/figuras/figuraLuffy2.png";
-import figuraSuperman from "../productos/figuras/figuraSuperman.png";
-
-const mercaderia = [
+import figuraGoku from "../components/productos/figuras/figuraGoku.png";
+import figuraItadori from "../components/productos/figuras/figuraItadori.png";
+import figuraKurama1 from "../components/productos/figuras/figuraKurama1.png";
+import figuraLuffy from "../components/productos/figuras/figuraLuffy.png";
+import figuraSuperman from "../components/productos/figuras/figuraSuperman.png";
+import figuraLuffy2 from "../components/productos/figuras/figuraLuffy2.png";
+const Mercaderia = [
   {
     id: 1,
     nombre: "GOKU BLUE",
@@ -74,4 +73,4 @@ const mercaderia = [
     detalle: "Luffy preparado para activar la segunda marcha",
   },
 ];
-export default mercaderia;
+export default Mercaderia;

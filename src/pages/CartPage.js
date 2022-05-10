@@ -1,24 +1,24 @@
 import { useState, useContext } from "react";
-import CartContext from "../components/context/CartContext";
-import ModalCustom from "../components/Modal/Modal";
+import CartContext from "../context/CartContext";
 import db from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
+import { Container } from "@mui/material";
 
 const CartPage = () => {
   const { cartProducts, deleteProduct, totalPrice } = useContext(CartContext);
-  const [openModal, setOpenModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
+    direction: "",
   });
   const [order, setOrder] = useState({
     buyer: formData,
     items: cartProducts.map((cartProduct) => {
       return {
         id: cartProduct.id,
-        title: cartProduct.title,
-        price: cartProduct.price,
+        title: cartProduct.nombre,
+        price: cartProduct.precio,
       };
     }),
     total: totalPrice,
@@ -35,7 +35,7 @@ const CartPage = () => {
   const pushOrder = async (prevOrder) => {
     const orderFirebase = collection(db, "ordenes");
     const orderDoc = await addDoc(orderFirebase, prevOrder);
-    console.log("orden generada: ", orderDoc.id);
+    console.log("Compra realizada: ", orderDoc.id);
     setSuccessOrder(orderDoc.id);
   };
 
@@ -52,25 +52,18 @@ const CartPage = () => {
   return (
     <Container>
       <div>
-        <div>
-          <h2>Producto</h2>
-          <h2>Descripcion</h2>
-          <h2>Precio unitario</h2>
-          <h2>Cantidad</h2>
-          <h2>Quitar</h2>
-        </div>
         {cartProducts.map((cartProduct) => {
-          const { price, imagen, title } = cartProduct;
+          const { precio, imagen, nombre } = cartProduct;
           return (
             <>
               <div>
                 <img src={`./${imagen}`} />
               </div>
               <div>
-                <p>{title}</p>
+                <p>{nombre}</p>
               </div>
               <div>
-                <p>precio: {price}</p>
+                <p>precio: {precio}</p>
               </div>
               <div>
                 <p>1</p>

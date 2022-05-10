@@ -1,33 +1,45 @@
-import dataProducts from "../data/Mercaderia";
 import { useEffect, useState, useContext } from "react";
-import ItemList from "./ItemList";
+import Card from "../Card/Card";
+import Mercaderia from "../../Utils/Mercaderia";
 import { Link, useParams } from "react-router-dom";
+import db from "../../firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const { category } = useParams();
   const [products, setProducts] = useState([]);
 
-  const getProducts = () => {
+  const getProducts = async () => {
+    const itemsCollection = collection(db, "figuras");
+    const productosSnapshot = await getDocs(itemsCollection);
+    const productList = productosSnapshot.docs.map((doc) => {
+      let product = doc.data();
+      product.id = doc.id;
+      console.log("product:", product);
+      return product;
+    });
     return new Promise((resolve, reject) => {
       return setTimeout(() => {
-        resolve(dataProducts);
+        resolve(productList);
       }, 5330);
     });
   };
 
   useEffect(() => {
     setProducts([]);
-    getProducts().then((res) => {
+    getProducts().then((productos) => {
       setLoading(false);
-      category ? filterProductByCategory(res, category) : setProducts(res);
+      category
+        ? filterProductByCategory(productos, category)
+        : setProducts(productos);
     });
   }, [category]);
 
   const filterProductByCategory = (array, category) => {
-    array.map((producto) => {
-      if (category == producto.categoria) {
-        return setProducts((products) => [...products, producto]);
+    array.map((product, i) => {
+      if (product.categoria === category) {
+        return setProducts((products) => [...products, product]);
       }
     });
   };
@@ -43,7 +55,10 @@ const ItemListContainer = () => {
         />
       ) : (
         <>
-          <ItemList items={products}></ItemList>
+          {" "}
+          {products.map((product) => (
+            <Card data={product} key={product.id} />
+          ))}{" "}
         </>
       )}
     </div>
